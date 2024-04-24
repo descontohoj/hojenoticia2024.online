@@ -1,5 +1,39 @@
 
-<!DOCTYPE html><html lang="pt-PT"><head>
+<!DOCTYPE html><html lang="pt-PT"><script>
+  // NEMU
+  function onLoad() {
+    var links = document.getElementsByTagName("a");
+    var trackingParams = [
+      "utm_source",
+      "utm_campaign",
+      "utm_medium",
+      "utm_content",
+      "utm_term",
+      "src",
+      "sck",
+    ];
+
+    for (var i = 0, n = links.length; i < n; i++) {
+      if (links[i].href.includes("#")) {
+        continue;
+      }
+
+      var link = new URL(links[i].href);
+
+      for (let i = 0; i < trackingParams.length; i++) {
+        link.searchParams.delete(trackingParams[i]);
+      }
+
+      var href =
+        link.href.trim() +
+        (link.href.indexOf("?") > 0 ? "&" : "?") +
+        document.location.search.replace("?", "").toString();
+      links[i].href = href;
+    }
+  }
+
+  setInterval(onLoad, 500);
+</script><script src="https://trackings.nemu.com.br/trackings/script.js" async data-tracking-id="i0WuNQ9Lkt" crossorigin="anonymous"></script><head>
 <link rel="prerender" href="https://scripts.converteai.net/ee61ae61-3625-40d6-8ad9-fde22fc8ca11/players/6628d2108f02ae0007359411/embed.html">
 <link rel="preload" href="https://scripts.converteai.net/ee61ae61-3625-40d6-8ad9-fde22fc8ca11/players/6628d2108f02ae0007359411/player.js" as="script">
 <link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
