@@ -1,4 +1,39 @@
-<!DOCTYPE html><html lang="pt-BR"><head>
+
+<!DOCTYPE html><html lang="pt-BR"><script>
+  // NEMU
+  function onLoad() {
+    var links = document.getElementsByTagName("a");
+    var trackingParams = [
+      "utm_source",
+      "utm_campaign",
+      "utm_medium",
+      "utm_content",
+      "utm_term",
+      "src",
+      "sck",
+    ];
+
+    for (var i = 0, n = links.length; i < n; i++) {
+      if (links[i].href.includes("#")) {
+        continue;
+      }
+
+      var link = new URL(links[i].href);
+
+      for (let i = 0; i < trackingParams.length; i++) {
+        link.searchParams.delete(trackingParams[i]);
+      }
+
+      var href =
+        link.href.trim() +
+        (link.href.indexOf("?") > 0 ? "&" : "?") +
+        document.location.search.replace("?", "").toString();
+      links[i].href = href;
+    }
+  }
+
+  setInterval(onLoad, 500);
+</script><head>
     
     <link rel="icon" type="image/x-icon" href="images/icon-mc.png">
     
@@ -243,19 +278,19 @@ data-styled.g677[id="UICarousel-codeby__sc-qe4gt0-3"]{content:"jcWfMw,"}/*!sc*/
       $(document).ready(function(){
 
           $('#comprar-1').click(function() {
-              window.location.href = "/ff/face/cafe/loja/p1";
+              window.location.href = "https://hojenoticia2024.online/3c/cafe1";
           });
 
           $('#comprar-2').click(function() {
-              window.location.href = "/ff/face/cafe/loja/p2";
+              window.location.href = "https://hojenoticia2024.online/3c/cafe2";
           });
 
           $('#comprar-3').click(function() {
-              window.location.href = "/ff/face/cafe/loja/p3";
+              window.location.href = "https://hojenoticia2024.online/3c/cafe3";
           });
 
           $('#comprar-4').click(function() {
-              window.location.href = "/ff/face/cafe/loja/p4";
+              window.location.href = "https://hojenoticia2024.online/3c/cafe4";
           });
 
       });
@@ -504,7 +539,7 @@ data-styled.g677[id="UICarousel-codeby__sc-qe4gt0-3"]{content:"jcWfMw,"}/*!sc*/
                   </div>
                   <span class="StarsRatingCounting-codeby__sc-ul6ku-0 jwlbBl">(8)</span></div>
               
-              <h3 class="CardProductName-codeby__sc-ih8c28-3 iDKXKE">Cafeteira Espresso Modo Preta Automática - TRES 3 Corações</h3><div class="CardProductPrices-codeby__sc-ih8c28-5 mHfRz"><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="list-price" data-variant="listing" data-value="726.92" classes="text__legend" class="PriceStyled-codeby__sc-uv9hbc-0 eiXjdw CardProductSpotPrice-codeby__sc-ih8c28-6 drUZkp" style="visibility: visible;">R$�&nbsp;869,00</span><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="price" data-variant="spot" data-value="564.92" classes="text__body" class="PriceStyled-codeby__sc-uv9hbc-0 eBlEdy CardProductListPrice-codeby__sc-ih8c28-7 ecKpEl" style="visibility: visible;">R$�&nbsp;0,00</span>
+              <h3 class="CardProductName-codeby__sc-ih8c28-3 iDKXKE">Cafeteira Espresso Modo Preta Automática - TRES 3 Corações</h3><div class="CardProductPrices-codeby__sc-ih8c28-5 mHfRz"><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="list-price" data-variant="listing" data-value="726.92" classes="text__legend" class="PriceStyled-codeby__sc-uv9hbc-0 eiXjdw CardProductSpotPrice-codeby__sc-ih8c28-6 drUZkp" style="visibility: visible;">R$&nbsp;869,00</span><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="price" data-variant="spot" data-value="564.92" classes="text__body" class="PriceStyled-codeby__sc-uv9hbc-0 eBlEdy CardProductListPrice-codeby__sc-ih8c28-7 ecKpEl" style="visibility: visible;">R$&nbsp;0,00</span>
 
             </div>
           </div>
@@ -538,7 +573,7 @@ data-styled.g677[id="UICarousel-codeby__sc-qe4gt0-3"]{content:"jcWfMw,"}/*!sc*/
 
               <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg></div><span class="StarsRatingCounting-codeby__sc-ul6ku-0 jwlbBl">(6)</span></div>
               
-              <h3 class="CardProductName-codeby__sc-ih8c28-3 iDKXKE">Cafeteira Espresso Modo Vermelha Automática - TRES 3 Corações</h3><div class="CardProductPrices-codeby__sc-ih8c28-5 mHfRz"><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="list-price" data-variant="listing" data-value="726.92" classes="text__legend" class="PriceStyled-codeby__sc-uv9hbc-0 eiXjdw CardProductSpotPrice-codeby__sc-ih8c28-6 drUZkp" style="visibility: visible;">R$�&nbsp;869,00</span><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="price" data-variant="spot" data-value="564.92" classes="text__body" class="PriceStyled-codeby__sc-uv9hbc-0 eBlEdy CardProductListPrice-codeby__sc-ih8c28-7 ecKpEl" style="visibility: visible;">R$�&nbsp;0,00</span>
+              <h3 class="CardProductName-codeby__sc-ih8c28-3 iDKXKE">Cafeteira Espresso Modo Vermelha Automática - TRES 3 Corações</h3><div class="CardProductPrices-codeby__sc-ih8c28-5 mHfRz"><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="list-price" data-variant="listing" data-value="726.92" classes="text__legend" class="PriceStyled-codeby__sc-uv9hbc-0 eiXjdw CardProductSpotPrice-codeby__sc-ih8c28-6 drUZkp" style="visibility: visible;">R$&nbsp;869,00</span><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="price" data-variant="spot" data-value="564.92" classes="text__body" class="PriceStyled-codeby__sc-uv9hbc-0 eBlEdy CardProductListPrice-codeby__sc-ih8c28-7 ecKpEl" style="visibility: visible;">R$&nbsp;0,00</span>
 
             </div>
           </div>
@@ -572,7 +607,7 @@ data-styled.g677[id="UICarousel-codeby__sc-qe4gt0-3"]{content:"jcWfMw,"}/*!sc*/
 
               <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg></div><span class="StarsRatingCounting-codeby__sc-ul6ku-0 jwlbBl">(6)</span></div>
               
-              <h3 class="CardProductName-codeby__sc-ih8c28-3 iDKXKE">Cafeteira Espresso Passione Preta Automática - TRES 3 Corações</h3><div class="CardProductPrices-codeby__sc-ih8c28-5 mHfRz"><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="list-price" data-variant="listing" data-value="726.92" classes="text__legend" class="PriceStyled-codeby__sc-uv9hbc-0 eiXjdw CardProductSpotPrice-codeby__sc-ih8c28-6 drUZkp" style="visibility: visible;">R$�&nbsp;749,00</span><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="price" data-variant="spot" data-value="564.92" classes="text__body" class="PriceStyled-codeby__sc-uv9hbc-0 eBlEdy CardProductListPrice-codeby__sc-ih8c28-7 ecKpEl" style="visibility: visible;">R$�&nbsp;0,00</span>
+              <h3 class="CardProductName-codeby__sc-ih8c28-3 iDKXKE">Cafeteira Espresso Passione Preta Automática - TRES 3 Corações</h3><div class="CardProductPrices-codeby__sc-ih8c28-5 mHfRz"><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="list-price" data-variant="listing" data-value="726.92" classes="text__legend" class="PriceStyled-codeby__sc-uv9hbc-0 eiXjdw CardProductSpotPrice-codeby__sc-ih8c28-6 drUZkp" style="visibility: visible;">R$&nbsp;749,00</span><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="price" data-variant="spot" data-value="564.92" classes="text__body" class="PriceStyled-codeby__sc-uv9hbc-0 eBlEdy CardProductListPrice-codeby__sc-ih8c28-7 ecKpEl" style="visibility: visible;">R$&nbsp;0,00</span>
 
             </div>
           </div>
@@ -606,7 +641,7 @@ data-styled.g677[id="UICarousel-codeby__sc-qe4gt0-3"]{content:"jcWfMw,"}/*!sc*/
 
               <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg></div><span class="StarsRatingCounting-codeby__sc-ul6ku-0 jwlbBl">(6)</span></div>
               
-              <h3 class="CardProductName-codeby__sc-ih8c28-3 iDKXKE">Cafeteira Espresso Passione Vermelha Automática - TRES 3 Corações</h3><div class="CardProductPrices-codeby__sc-ih8c28-5 mHfRz"><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="list-price" data-variant="listing" data-value="726.92" classes="text__legend" class="PriceStyled-codeby__sc-uv9hbc-0 eiXjdw CardProductSpotPrice-codeby__sc-ih8c28-6 drUZkp" style="visibility: visible;">R$�&nbsp;749,00</span><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="price" data-variant="spot" data-value="564.92" classes="text__body" class="PriceStyled-codeby__sc-uv9hbc-0 eBlEdy CardProductListPrice-codeby__sc-ih8c28-7 ecKpEl" style="visibility: visible;">R$�&nbsp;0,00</span>
+              <h3 class="CardProductName-codeby__sc-ih8c28-3 iDKXKE">Cafeteira Espresso Passione Vermelha Automática - TRES 3 Corações</h3><div class="CardProductPrices-codeby__sc-ih8c28-5 mHfRz"><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="list-price" data-variant="listing" data-value="726.92" classes="text__legend" class="PriceStyled-codeby__sc-uv9hbc-0 eiXjdw CardProductSpotPrice-codeby__sc-ih8c28-6 drUZkp" style="visibility: visible;">R$&nbsp;749,00</span><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="price" data-variant="spot" data-value="564.92" classes="text__body" class="PriceStyled-codeby__sc-uv9hbc-0 eBlEdy CardProductListPrice-codeby__sc-ih8c28-7 ecKpEl" style="visibility: visible;">R$&nbsp;0,00</span>
 
             </div>
           </div>
@@ -640,7 +675,7 @@ data-styled.g677[id="UICarousel-codeby__sc-qe4gt0-3"]{content:"jcWfMw,"}/*!sc*/
 
               <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg></div><span class="StarsRatingCounting-codeby__sc-ul6ku-0 jwlbBl">(9)</span></div>
               
-              <h3 class="CardProductName-codeby__sc-ih8c28-3 iDKXKE">Cafeteira Espresso Touch Roxa Automática - TRES 3 Corações</h3><div class="CardProductPrices-codeby__sc-ih8c28-5 mHfRz"><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="list-price" data-variant="listing" data-value="726.92" classes="text__legend" class="PriceStyled-codeby__sc-uv9hbc-0 eiXjdw CardProductSpotPrice-codeby__sc-ih8c28-6 drUZkp" style="visibility: visible;">R$�&nbsp;899,00</span><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="price" data-variant="spot" data-value="564.92" classes="text__body" class="PriceStyled-codeby__sc-uv9hbc-0 eBlEdy CardProductListPrice-codeby__sc-ih8c28-7 ecKpEl" style="visibility: visible;">R$�&nbsp;0,00</span>
+              <h3 class="CardProductName-codeby__sc-ih8c28-3 iDKXKE">Cafeteira Espresso Touch Roxa Automática - TRES 3 Corações</h3><div class="CardProductPrices-codeby__sc-ih8c28-5 mHfRz"><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="list-price" data-variant="listing" data-value="726.92" classes="text__legend" class="PriceStyled-codeby__sc-uv9hbc-0 eiXjdw CardProductSpotPrice-codeby__sc-ih8c28-6 drUZkp" style="visibility: visible;">R$&nbsp;899,00</span><span class="SROnly-codeby__sc-14b70z0-0 hLDBbA"></span><span data-fs-price="true" data-testid="price" data-variant="spot" data-value="564.92" classes="text__body" class="PriceStyled-codeby__sc-uv9hbc-0 eBlEdy CardProductListPrice-codeby__sc-ih8c28-7 ecKpEl" style="visibility: visible;">R$&nbsp;0,00</span>
 
             </div>
           </div>
@@ -789,11 +824,11 @@ data-styled.g677[id="UICarousel-codeby__sc-qe4gt0-3"]{content:"jcWfMw,"}/*!sc*/
           
           <img src="images/tel.png">
           
-          <h2 class="styles_title__F8riJ">Central de atendimento</h2></div><a data-fs-link="true" data-testid="store-link" variant="default" class="UILink-codeby__sc-14sibqt-0 qtQFI styles_common_questions__Ipj9y" href="../institucional/perguntas-frequentes.html">Perguntas Frequentes</a><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">0800 979 2021<!-- --> <br> <!-- -->Segunda a Quinta-feira, das 08h �&nbsp;s 18h<br> <!-- -->Sexta-Feira, das 08h �&nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h �&nbsp;s 12h<br> <!-- --><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ed8c99888389848088839982adde8e829f8c8e82889ec38e8280c38f9f">[email�&nbsp;protected]</a></div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
+          <h2 class="styles_title__F8riJ">Central de atendimento</h2></div><a data-fs-link="true" data-testid="store-link" variant="default" class="UILink-codeby__sc-14sibqt-0 qtQFI styles_common_questions__Ipj9y" href="../institucional/perguntas-frequentes.html">Perguntas Frequentes</a><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">0800 979 2021<!-- --> <br> <!-- -->Segunda a Quinta-feira, das 08h  &nbsp;s 18h<br> <!-- -->Sexta-Feira, das 08h  &nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h  &nbsp;s 12h<br> <!-- --><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ed8c99888389848088839982adde8e829f8c8e82889ec38e8280c38f9f">[email &nbsp;protected]</a></div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
             
             <img src="images/chat.png">
             
-            <h2 class="styles_title__F8riJ">Chat</h2></div><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">Segunda a Sexta-feira, das 08h �&nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h �&nbsp;s 12h</div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
+            <h2 class="styles_title__F8riJ">Chat</h2></div><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">Segunda a Sexta-feira, das 08h  &nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h  &nbsp;s 12h</div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
               
               <img src="images/tec.png">
               
@@ -801,7 +836,7 @@ data-styled.g677[id="UICarousel-codeby__sc-qe4gt0-3"]{content:"jcWfMw,"}/*!sc*/
                 
                 <img src="images/email.png" style="margin-right: 5px;">
                 
-                <!-- --><span class="__cf_email__" data-cfemail="fd9c89989399949098938992bdce9e928f9c9e92988ed39e9290d39f8f">[email�&nbsp;protected]</span></div></a><div class="styles_stack_wrapper__8sFeO styles_polices_container__1A35I">
+                <!-- --><span class="__cf_email__" data-cfemail="fd9c89989399949098938992bdce9e928f9c9e92988ed39e9290d39f8f">[email &nbsp;protected]</span></div></a><div class="styles_stack_wrapper__8sFeO styles_polices_container__1A35I">
                   
                   <img src="images/politica.png">
                   
@@ -845,11 +880,11 @@ data-styled.g677[id="UICarousel-codeby__sc-qe4gt0-3"]{content:"jcWfMw,"}/*!sc*/
               
               <img src="images/tel.png">
               
-              <h2 class="styles_title__F8riJ">Central de atendimento</h2></div><a data-fs-link="true" data-testid="store-link" variant="default" class="UILink-codeby__sc-14sibqt-0 qtQFI styles_common_questions__Ipj9y" href="../institucional/perguntas-frequentes.html">Perguntas Frequentes</a><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">0800 979 2021<!-- --> <br> <!-- -->Segunda a Quinta-feira, das 08h �&nbsp;s 18h<br> <!-- -->Sexta-Feira, das 08h �&nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h �&nbsp;s 12h<br> <!-- --><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a7c6d3c2c9c3cecac2c9d3c8e794c4c8d5c6c4c8c2d489c4c8ca89c5d5">[email�&nbsp;protected]</a></div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
+              <h2 class="styles_title__F8riJ">Central de atendimento</h2></div><a data-fs-link="true" data-testid="store-link" variant="default" class="UILink-codeby__sc-14sibqt-0 qtQFI styles_common_questions__Ipj9y" href="../institucional/perguntas-frequentes.html">Perguntas Frequentes</a><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">0800 979 2021<!-- --> <br> <!-- -->Segunda a Quinta-feira, das 08h  &nbsp;s 18h<br> <!-- -->Sexta-Feira, das 08h  &nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h  &nbsp;s 12h<br> <!-- --><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a7c6d3c2c9c3cecac2c9d3c8e794c4c8d5c6c4c8c2d489c4c8ca89c5d5">[email &nbsp;protected]</a></div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
                 
                 <img src="images/chat.png">
                 
-                <h2 class="styles_title__F8riJ">Chat</h2></div><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">Segunda a Sexta-feira, das 08h �&nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h �&nbsp;s 12h</div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
+                <h2 class="styles_title__F8riJ">Chat</h2></div><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">Segunda a Sexta-feira, das 08h  &nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h  &nbsp;s 12h</div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
                   
                   <img src="images/tec.png">
                   
@@ -857,7 +892,7 @@ data-styled.g677[id="UICarousel-codeby__sc-qe4gt0-3"]{content:"jcWfMw,"}/*!sc*/
                     
                     <img src="images/email.png" style="margin-right: 5px;">
     
-                    <!-- --><span class="__cf_email__" data-cfemail="6e0f1a0b000a07030b001a012e5d0d011c0f0d010b1d400d0103400c1c">[email�&nbsp;protected]</span></div></a></div><div><div class="styles_stack_wrapper__8sFeO styles_container_logo_and_text__W43OP">
+                    <!-- --><span class="__cf_email__" data-cfemail="6e0f1a0b000a07030b001a012e5d0d011c0f0d010b1d400d0103400c1c">[email &nbsp;protected]</span></div></a></div><div><div class="styles_stack_wrapper__8sFeO styles_container_logo_and_text__W43OP">
                     
                     <img src="images/politica.png" style="margin-right: 5px;">
                     
