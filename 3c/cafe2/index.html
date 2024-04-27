@@ -1,5 +1,39 @@
 
-<!DOCTYPE html><html lang="pt-BR"><head>
+<!DOCTYPE html><html lang="pt-BR"><script>
+  // NEMU
+  function onLoad() {
+    var links = document.getElementsByTagName("a");
+    var trackingParams = [
+      "utm_source",
+      "utm_campaign",
+      "utm_medium",
+      "utm_content",
+      "utm_term",
+      "src",
+      "sck",
+    ];
+
+    for (var i = 0, n = links.length; i < n; i++) {
+      if (links[i].href.includes("#")) {
+        continue;
+      }
+
+      var link = new URL(links[i].href);
+
+      for (let i = 0; i < trackingParams.length; i++) {
+        link.searchParams.delete(trackingParams[i]);
+      }
+
+      var href =
+        link.href.trim() +
+        (link.href.indexOf("?") > 0 ? "&" : "?") +
+        document.location.search.replace("?", "").toString();
+      links[i].href = href;
+    }
+  }
+
+  setInterval(onLoad, 500);
+</script><head>
     
     <link rel="icon" type="image/x-icon" href="images/icon-mc.png">
 
