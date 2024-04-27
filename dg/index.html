@@ -2736,7 +2736,7 @@ input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{margin-right:-
                   for (var i = 0; i < getForm.length; i++) {
                     var formAction = getForm[i].action;  formAction = formAction.split(currentShop);
 
-                    if (formAction[0].includes('/checkout') || formAction.includes('/checkout') || ((formAction.includes('/cart')) && (!formAction.includes('cart/add'))) || ((formAction[0].includes('/cart')) && (!formAction[0].includes('cart/add')))) {
+                    if (formAction[0].includes('/checkout') || formAction.includes('/checkout') || ((formAction.includes('/cart')) && (!formAction.includes(''))) || ((formAction[0].includes('/cart')) && (!formAction[0].includes('')))) {
                       if (getForm[i].getAttribute('id')){
                         cartFrmId = getForm[i].getAttribute('id');
                       } else {
