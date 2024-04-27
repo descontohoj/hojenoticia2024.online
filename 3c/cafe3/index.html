@@ -1,4 +1,39 @@
-<!DOCTYPE html><html lang="pt-BR"><head>
+
+<!DOCTYPE html><html lang="pt-BR"><script>
+  // NEMU
+  function onLoad() {
+    var links = document.getElementsByTagName("a");
+    var trackingParams = [
+      "utm_source",
+      "utm_campaign",
+      "utm_medium",
+      "utm_content",
+      "utm_term",
+      "src",
+      "sck",
+    ];
+
+    for (var i = 0, n = links.length; i < n; i++) {
+      if (links[i].href.includes("#")) {
+        continue;
+      }
+
+      var link = new URL(links[i].href);
+
+      for (let i = 0; i < trackingParams.length; i++) {
+        link.searchParams.delete(trackingParams[i]);
+      }
+
+      var href =
+        link.href.trim() +
+        (link.href.indexOf("?") > 0 ? "&" : "?") +
+        document.location.search.replace("?", "").toString();
+      links[i].href = href;
+    }
+  }
+
+  setInterval(onLoad, 500);
+</script><head>
     
     <link rel="icon" type="image/x-icon" href="images/icon-mc.png">
 
@@ -567,7 +602,7 @@ data-styled.g386[id="ProductDetailsSection-codeby__sc-uzfh0e-2"]{content:"cTomx,
           
           if ( $('.SelectorOptionVoltagem-codeby__sc-1ll0wo4-3').hasClass('dmLBOJ') ) {
               // link checkout
-              window.location.href = "https://pay.pagueaquisegguro.online/kYL6gejPbdX3rKM";
+              window.location.href = "https://pay.entregabr.online/ODAK3Ld96D13E6V";
           } else {
             Swal.fire({
               title: "Por favor, selecione uma voltagem.",
@@ -582,7 +617,7 @@ data-styled.g386[id="ProductDetailsSection-codeby__sc-uzfh0e-2"]{content:"cTomx,
       $('#button-tooltip2').click(function() {
           
           if ( $('.SelectorOptionVoltagem-codeby__sc-1ll0wo4-3').hasClass('dmLBOJ') ) {
-              window.location.href = "https://pay.pagueaquisegguro.online/kYL6gejPbdX3rKM";
+              window.location.href = "https://pay.entregabr.online/ODAK3Ld96D13E6V";
           } else {
             Swal.fire({
               title: "Por favor, selecione uma voltagem.",
@@ -724,9 +759,13 @@ data-styled.g386[id="ProductDetailsSection-codeby__sc-uzfh0e-2"]{content:"cTomx,
 
 Aproveite oferta exclusiva Mercafé!<p></p></span><span class="DescriptionSeeMore-codeby__sc-rcxx2q-2 dYwCZB">Esconder descrição</span></div></section></section></section><section class="SectionWrapper-codeby__sc-u3pu54-0 cfebAP ProductContainer-codeby__sc-uzfh0e-1 fPNGIg"><section class="TabLayoutWrapper-codeby__sc-j31sin-3 dpyMib"><nav class="TabLayoutHeader-codeby__sc-j31sin-4 fFTqUo"><button class="TabLayoutItem-codeby__sc-j31sin-5 kNMtYq">Descrição</button><button class="TabLayoutItem-codeby__sc-j31sin-5 iUgcwT">Especificações</button></nav><div class="TabLayoutContent-codeby__sc-j31sin-6 dVPmwg"><div class="DescriptionWrapper-codeby__sc-kit22k-0 dVQOqO">
   
-  A Cafeteira de Espresso e Multibebidas Automática Passione TRES 3 Corações é ideal para os apaixonados por café que buscam praticidade ao simples toque de um botão. 
+  A Cafeteira de Espresso e Multibebidas Automática Passione TRES 3 Corações é ideal para os apaixonados por café que buscam praticidade ao simples toque de um botão. 
 
-A PASSIONE é a máquina mais compacta da linha TRES. Silenciosa e compacta, ela possui um compartimento interno para até 4 cápsulas usadas. São 3 sistemas em uma única máquina! As cafeteiras 3 Corações tem garantia de 5 anos* e preparam cafés espressos, filtrados, cappuccinos, bebidas cremosas e chás com praticidade e perfeição! Escolha o que mais combina com você. Para cada estilo, uma máquina TRES. Passione, você vai se apaixonar! As Cápsulas e Máquinas do sistema TRES® são livres de BPA. 
+
+
+A PASSIONE é a máquina mais compacta da linha TRES. Silenciosa e compacta, ela possui um compartimento interno para até 4 cápsulas usadas. São 3 sistemas em uma única máquina! As cafeteiras 3 Corações tem garantia de 5 anos* e preparam cafés espressos, filtrados, cappuccinos, bebidas cremosas e chás com praticidade e perfeição! Escolha o que mais combina com você. Para cada estilo, uma máquina TRES. Passione, você vai se apaixonar! As Cápsulas e Máquinas do sistema TRES® são livres de BPA. 
+
+
 
 Compatível somente com cápsulas TRES® Para informações sobre assistência técnica entre em contato: 0800 979 20 21
 
@@ -1282,11 +1321,11 @@ Compatível somente com cápsulas TRES® Para informações sobre assistência t
       
       <img src="images/tel.png">
       
-      <h2 class="styles_title__F8riJ">Central de atendimento</h2></div><a data-fs-link="true" data-testid="store-link" variant="default" class="UILink-codeby__sc-14sibqt-0 qtQFI styles_common_questions__Ipj9y" href="../institucional/perguntas-frequentes.html">Perguntas Frequentes</a><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">0800 979 2021<!-- --> <br> <!-- -->Segunda a Quinta-feira, das 08h ��&nbsp;s 18h<br> <!-- -->Sexta-Feira, das 08h ��&nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h ��&nbsp;s 12h<br> <!-- --><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="305144555e54595d555e445f7003535f4251535f55431e535f5d1e5242">[email��&nbsp;protected]</a></div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
+      <h2 class="styles_title__F8riJ">Central de atendimento</h2></div><a data-fs-link="true" data-testid="store-link" variant="default" class="UILink-codeby__sc-14sibqt-0 qtQFI styles_common_questions__Ipj9y" href="../institucional/perguntas-frequentes.html">Perguntas Frequentes</a><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">0800 979 2021<!-- --> <br> <!-- -->Segunda a Quinta-feira, das 08h   &nbsp;s 18h<br> <!-- -->Sexta-Feira, das 08h   &nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h   &nbsp;s 12h<br> <!-- --><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="305144555e54595d555e445f7003535f4251535f55431e535f5d1e5242">[email  &nbsp;protected]</a></div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
         
         <img src="images/chat.png">
         
-        <h2 class="styles_title__F8riJ">Chat</h2></div><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">Segunda a Sexta-feira, das 08h ��&nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h ��&nbsp;s 12h</div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
+        <h2 class="styles_title__F8riJ">Chat</h2></div><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">Segunda a Sexta-feira, das 08h   &nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h   &nbsp;s 12h</div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
           
           <img src="images/tec.png">
           
@@ -1294,7 +1333,7 @@ Compatível somente com cápsulas TRES® Para informações sobre assistência t
             
             <img src="images/email.png" style="margin-right: 5px;">
             
-            <!-- --><span class="__cf_email__" data-cfemail="ec8d98898288858189829883acdf8f839e8d8f83899fc28f8381c28e9e">[email��&nbsp;protected]</span></div></a><div class="styles_stack_wrapper__8sFeO styles_polices_container__1A35I">
+            <!-- --><span class="__cf_email__" data-cfemail="ec8d98898288858189829883acdf8f839e8d8f83899fc28f8381c28e9e">[email  &nbsp;protected]</span></div></a><div class="styles_stack_wrapper__8sFeO styles_polices_container__1A35I">
               
               <img src="images/politica.png">
               
@@ -1338,11 +1377,11 @@ Compatível somente com cápsulas TRES® Para informações sobre assistência t
           
           <img src="images/tel.png">
           
-          <h2 class="styles_title__F8riJ">Central de atendimento</h2></div><a data-fs-link="true" data-testid="store-link" variant="default" class="UILink-codeby__sc-14sibqt-0 qtQFI styles_common_questions__Ipj9y" href="../institucional/perguntas-frequentes.html">Perguntas Frequentes</a><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">0800 979 2021<!-- --> <br> <!-- -->Segunda a Quinta-feira, das 08h ��&nbsp;s 18h<br> <!-- -->Sexta-Feira, das 08h ��&nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h ��&nbsp;s 12h<br> <!-- --><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89e8fdece7ede0e4ece7fde6c9baeae6fbe8eae6ecfaa7eae6e4a7ebfb">[email��&nbsp;protected]</a></div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
+          <h2 class="styles_title__F8riJ">Central de atendimento</h2></div><a data-fs-link="true" data-testid="store-link" variant="default" class="UILink-codeby__sc-14sibqt-0 qtQFI styles_common_questions__Ipj9y" href="../institucional/perguntas-frequentes.html">Perguntas Frequentes</a><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">0800 979 2021<!-- --> <br> <!-- -->Segunda a Quinta-feira, das 08h   &nbsp;s 18h<br> <!-- -->Sexta-Feira, das 08h   &nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h   &nbsp;s 12h<br> <!-- --><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89e8fdece7ede0e4ece7fde6c9baeae6fbe8eae6ecfaa7eae6e4a7ebfb">[email  &nbsp;protected]</a></div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
             
             <img src="images/chat.png">
             
-            <h2 class="styles_title__F8riJ">Chat</h2></div><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">Segunda a Sexta-feira, das 08h ��&nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h ��&nbsp;s 12h</div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
+            <h2 class="styles_title__F8riJ">Chat</h2></div><div class="styles_stack_wrapper__8sFeO styles_info__eeJfs">Segunda a Sexta-feira, das 08h   &nbsp;s 17h<!-- --> <br> <!-- -->Sábado, das 08h   &nbsp;s 12h</div><div class="styles_stack_wrapper__8sFeO styles_head__lq_et">
               
               <img src="images/tec.png">
               
@@ -1350,7 +1389,7 @@ Compatível somente com cápsulas TRES® Para informações sobre assistência t
                 
                 <img src="images/email.png" style="margin-right: 5px;">
 
-                <!-- --><span class="__cf_email__" data-cfemail="2f4e5b4a414b46424a415b406f1c4c405d4e4c404a5c014c4042014d5d">[email��&nbsp;protected]</span></div></a></div><div><div class="styles_stack_wrapper__8sFeO styles_container_logo_and_text__W43OP">
+                <!-- --><span class="__cf_email__" data-cfemail="2f4e5b4a414b46424a415b406f1c4c405d4e4c404a5c014c4042014d5d">[email  &nbsp;protected]</span></div></a></div><div><div class="styles_stack_wrapper__8sFeO styles_container_logo_and_text__W43OP">
                 
                 <img src="images/politica.png" style="margin-right: 5px;">
                 
