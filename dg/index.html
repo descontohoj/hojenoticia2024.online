@@ -2608,250 +2608,39 @@ input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{margin-right:-
 
 
           
-<!-- Não remova. Checkout Adoorei. -->
-  
-  <script src="https://c2.cdn1tp.net/1b980fa705814b51871ba57d715aa70a/js/security.js" view="item"></script>
 
-
-
-
-
-
-<style>
-    .adoorei-loader {display: none; position: fixed; width: 100%; height: 100%; background: #fff; left: 0; top: 0; z-index:99999}.adooHdnEl{display:none;}
-    .adoorei-loading{position:fixed;overflow:show;margin:auto;top:0;left:0;bottom:0;right:0;width:50px;height:50px}.adoorei-spinner-msg{margin-top:1rem;}.adoorei-loading:not(:required){text-shadow:none;background-color:transparent;border:0; width:320px;text-align: -webkit-center;}.adoorei-loading-spinner{content:'';display:block;font-size:10px;width:50px;height:50px;margin-top:-.5em;border:5px solid #999;border-radius:100%;border-bottom-color:transparent;-webkit-animation:spinner 1s linear 0s infinite;animation:spinner 1s linear 0s infinite}@-webkit-keyframes spinner{0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}}@-moz-keyframes spinner{0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}}@-o-keyframes spinner{0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes  spinner{0%{-webkit-transform:rotate(0);-moz-transform:rotate(0);-ms-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}}
-
-</style>
-
-<div class="adoorei-loader">
-    <div class="adoorei-loading">
-    <div class="adoorei-loading-spinner"></div>
-    <div class="adoorei-spinner-msg">Estamos finalizando o seu pedido...</div>
-    </div>
-</div>
-
-
-<script type="text/javascript">
-
-
-        var cart_cookie = adoorei_getCookie('cart');
-        var adoorei_hasUrlSupport = 'undefined' !== typeof URL && 'undefined' !== typeof URLSearchParams;
-        var adoorei_utmCookieName = 'utmsTrack';
-        window.adooreiCheckoutUrl = '';
-
-
-
-      document.addEventListener("DOMContentLoaded", function(event) {
-            let mnCartCheckoutBtn = document.querySelectorAll('[data-action="toggle-mini-cart"]');
-
-        for (let i = 0; i < mnCartCheckoutBtn.length; i++) {mnCartCheckoutBtn[i].dataset.action = 'adoorei-MnCart'; mnCartCheckoutBtn[i].setAttribute('href', '/cart');}
-
-        let a_carts = document.querySelectorAll('a[href="/cart"]');
-
-        for(let i = 0; i < a_carts.length; i++) {a_carts[i].addEventListener('click', function () {document.location.href = '/cart'})}
-
-
-        var inpSkipAdoo = document.createElement("input");
-
-        inpSkipAdoo.setAttribute('name', 'inpSkipAdoo');
-
-        inpSkipAdoo.setAttribute('value', 'y');
-
-        inpSkipAdoo.setAttribute('type', 'text');
-
-        inpSkipAdoo.setAttribute('style', 'display: none');
-
-        //let mnCartForm = document.querySelectorAll('[id="mini-cart"]');
-        let mnCartForm = [];
-
-        for (let i = 0; i < mnCartForm.length; i++) {mnCartForm[i].setAttribute('method', 'GET'); mnCartForm[i].addEventListener('submit', fakeClick);}
-        });
-
-
-
-        var currentShopPage = 'product'
-        ,   adooreiCartEndpoint = 'https://api.finalizarcompra.io/public/shopify/cart'
-        ,   currentShop = 'https://www.promocaodolce.site';
-
-    var checkoutBtncss = '<style id="adoorei-btn-style" type="text/css"> body .adoorei-CrtpageMainFrm input[type="submit"]:not([name="update"]), body .adoorei-CrtpageMainFrm button[type="submit"]:not([name="update"]), body #main-cart-footer [name="checkout"]:not([class*="adoorei_elem_"]):not([name="update"]),  body .adoorei_check_mainBtn[name="checkout"]:not([class*="adoorei_elem_"]):not([name="update"]), body input.adoorei_check_mainBtn:not([class*="adoorei_elem_"]):not([name="update"]) { display: none !important; }body .adoorei-CrtpageMainFrm .adoorei_check_mainBtn.adoorei_elem_mainBtn[type="submit"]:not(.bold_hidden){ display: inline-block !important; } </style>';
-
-    function showAdooreiLoader() {
-        var el = document.querySelector('.adoorei-loader');
-        el.style.display = 'block';
-    }
-
-    function hideAdooreiLoader() {
-        var el = document.querySelector('.adoorei-loader');
-        el.style.display = 'none';
-    }
-
-    if (currentShopPage == 'cart') {
-
-    showAdooreiLoader();
-
-      getAjax('/cart.json', function (response) {
-            var cartPayload = JSON.parse(response);
-
-            var data = {
-                shop: Shopify.shop,
-                origin: document.location.host,
-                cart_payload: cartPayload
-            };
-
-            postAjax(adooreiCartEndpoint, JSON.stringify(data), function (response) {
-                var resp = JSON.parse(response);
-
-                if (!resp.active) {
-                  hideAdooreiLoader();
-                } else {
-
-                  if((resp.skip_cart || window.location.href.includes('skipCart')) && cartPayload.item_count > 0) {
-
-                        if(resp.skip_cart)
-                        postAjax('/cart/clear.js?revy-request=t', JSON.stringify({}), function () {
-                                                window.location.href = adoorei_getUrlWithUtms(resp.checkout_direct_url);
-                                                });
-                        else
-                                window.location.href = adoorei_getUrlWithUtms(resp.checkout_direct_url);
-
-
-                        return false;
-                  }
-
-                  var otherButtons = document.getElementsByClassName('cartX_check_mainBtn');
-
-                  for (var i = 0; i < otherButtons.length; i ++) {
-                        otherButtons[i].setAttribute('style', 'display: none !important');
-                  }
-
-                  window.adooreiCheckoutUrl = resp.checkout_direct_url;
-
-                  var getHead = document.getElementsByTagName('head')[0];
-                  getHead.insertAdjacentHTML('beforeend', checkoutBtncss);
-                  var getForm = document.getElementsByTagName('form'); var cartFrmId,getCheckoutBtn;
-
-
-                  let checkoutBtnFound = false;
-
-                  for (var i = 0; i < getForm.length; i++) {
-                    var formAction = getForm[i].action;  formAction = formAction.split(currentShop);
-
-                    if (formAction[0].includes('/checkout') || formAction.includes('/checkout') || ((formAction.includes('/cart')) && (!formAction.includes(''))) || ((formAction[0].includes('/cart')) && (!formAction[0].includes('')))) {
-                      if (getForm[i].getAttribute('id')){
-                        cartFrmId = getForm[i].getAttribute('id');
-                      } else {
-                        getForm[i].setAttribute('id','adoorei-CrtpageMainFrm'); cartFrmId = getForm[i].getAttribute('id');
-                      }
-                      getForm[i].classList.add('adoorei-CrtpageMainFrm');
-                      getCheckoutBtn = getForm[i].elements['checkout'] || getForm[i].querySelector('a[href="/checkout"]') || getForm[i].querySelector('form[action="/cart"] input[type="submit"]')  || getForm[i].querySelector('form[action="/cart"] button[type="submit"]')  || getForm[i].querySelector('form[action="/cart"] button#cart-checkout') || getForm[i].querySelector('button[onclick="yampiClick()"]') || getForm[i].querySelector('button[name=checkout][form=cart]');
-
-                      if(!getCheckoutBtn)
-                        continue;
-
-
-                      if (getCheckoutBtn.length == undefined) {
-                        if(getCheckoutBtn.getAttribute('name') == 'update') continue;
-                        var buttonValue = getCheckoutBtn.value ? getCheckoutBtn.value : getCheckoutBtn.textContent;
-                      } else {
-                        var lastBtnID = getCheckoutBtn.length - 1;
-                        if(getCheckoutBtn[lastBtnID].getAttribute('name') == 'update') continue;
-                        var buttonValue = getCheckoutBtn[lastBtnID].value ? getCheckoutBtn[lastBtnID].value : getCheckoutBtn[lastBtnID].textContent;
-                      }
-
-                      checkoutBtnFound = true;
-                      var getSubBtnId = getCheckoutBtn.id;
-                      if (getSubBtnId) {
-                        getSubBtnId = getSubBtnId+'adooreiButton';
-                      } else {
-                        getSubBtnId = 'adooreiBtn';
-                      }
-
-                      if (getCheckoutBtn.length == undefined) {
-                        var inptBtn = `<button type='submit' class='`+getCheckoutBtn.className+` adoorei_check_mainBtn adoorei_elem_mainBtn' id='`+getSubBtnId+`'>`+buttonValue+`</button>`;
-                        getCheckoutBtn.insertAdjacentHTML('afterEnd', inptBtn);
-                      } else {
-                        var inptBtn = `<button type='submit' class='`+getCheckoutBtn[getCheckoutBtn.length - 1].className+` adoorei_check_mainBtn adoorei_elem_mainBtn' id='`+getSubBtnId+`'>`+buttonValue+`</button>`;
-                        getCheckoutBtn[getCheckoutBtn.length - 1].insertAdjacentHTML('afterEnd', inptBtn);
-                      }
-
-                      document.getElementById(getSubBtnId).addEventListener('click', fakeClick);
-
-                      let chksBtns = document.querySelectorAll('[id="'+getSubBtnId+'"]');
-
-                      for (let i = 0; i < chksBtns.length; i++) {chksBtns[i].addEventListener('click', fakeClick);}
-
-                      if(getForm[i].querySelector('button[onclick="yampiClick()"]') && getForm[i].querySelector('[id="'+getSubBtnId+'"]')) {
-                        let bnStyle = getForm[i].querySelector('button[onclick="yampiClick()"]').getAttribute('style');
-                        getForm[i].querySelector('[id="'+getSubBtnId+'"]').setAttribute('style', bnStyle);
-                        getForm[i].querySelector('button[onclick="yampiClick()"]').style.display = 'none';
-                      }
-
-
-                    }
-                  }
-
-                  if((cartPayload.item_count == 0) || (document.querySelector('[onclick="yampiClick()"]')) || (document.querySelector('a[href="/a/checkout"]'))) {
-                        
-                   }
-                   else if(!checkoutBtnFound && (!document.querySelector('a[href="/a/checkout"]'))) {
-                        fakeClick(new Event(null));
-                   }
-
-
-            hideAdooreiLoader();
-
-                  if (window.$ || window.jQuery) {
-                    var btns = $('a.btn-checkout[href="/checkout"], button#cart-checkout').not('.adoorei_elem_mainBtn');
-                    btns.hide();
-                  }
-                }
-            });
-
-        });
-
-
-    }
-
-    ["click","submit"].forEach(function(t){document.addEventListener(t,function(t){if("click"===t.type){if(event.target.matches('form[action=""] [type=submit], form[action=""] [type=submit] *')){event.preventDefault(),event.stopPropagation(),event.target.setAttribute("aria-busy",!0);let a=event.target.querySelector(".loader-button__loader");a&&a.removeAttribute("hidden"),document.location.href=adoorei_getUrlWithUtms("https://rei-do-chocolate-3.finalizarcompra.io/v/"+new FormData(event.target.closest("form")).get("id"))}}else"submit"===t.type&&event.target.matches('form[action=""], form[action=""] *')&&(event.preventDefault(),event.stopPropagation(),document.location.href=adoorei_getUrlWithUtms("https://rei-do-chocolate-3.finalizarcompra.io/v/"+new FormData(event.target).get("id")))},!1)});
-
-    document.querySelectorAll('a.js-cart-btn-checkout[href="/checkout"]').forEach(a => a.setAttribute('href', '/cart'));
-
-    //document.querySelectorAll('form[action=""]').forEach(f => {f.addEventListener('submit', function () { console.log('submit'); return false;})});
-    
-
-<div id="product-form">
-  <select id="product-color" name="color">
-    <option value="preta">Preta</option>
-    <option value="vermelha">Vermelha</option>
-    <option value="vermelha-e-preta">Vermelha e Preta</option>
-    <option value="branca">Branca</option>
-  </select>
-  <button id="checkout-button" type="button">COMPRAR AGORA</button>
+<div>
+    <select id="color-select">
+        <option value="preta">Preta</option>
+        <option value="vermelha">Vermelha</option>
+        <option value="vermelha-e-preta">Vermelha e Preta</option>
+        <option value="branca">Branca</option>
+    </select>
+    <button id="checkout-button">Comprar Agora</button>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('product-form');
+document.addEventListener('DOMContentLoaded', function() {
     var checkoutButton = document.getElementById('checkout-button');
-    var colorSelect = document.getElementById('product-color');
+    var colorSelect = document.getElementById('color-select');
 
     checkoutButton.addEventListener('click', function() {
-      var selectedColor = colorSelect.value;
-      var checkoutUrl;
+        var selectedColor = colorSelect.value;
+        var checkoutUrl;
 
-      if (selectedColor === 'preta') {
-        checkoutUrl = 'https://pagamento-6.finalizarcompra.com/r/35i186D9f2y7G24Rd6o';
-      } else if (selectedColor === 'vermelha') {
-        checkoutUrl = 'https://pagamento-6.finalizarcompra.com/r/j2R323640mnUijF8m58';
-      } else if (selectedColor === 'vermelha-e-preta') {
-        checkoutUrl = 'https://pagamento-6.finalizarcompra.com/r/m3gLj542iX58Lo2916';
-      } else if (selectedColor === 'branca') {
-        checkoutUrl = 'https://pagamento-6.finalizarcompra.com/r/H4836t824p15yJMh22Yd';
-      }
+        if (selectedColor === 'preta') {
+            checkoutUrl = 'https://pagamento-6.finalizarcompra.com/r/35i186D9f2y7G24Rd6o';
+        } else if (selectedColor === 'vermelha') {
+            checkoutUrl = 'https://pagamento-6.finalizarcompra.com/r/j2R323640mnUijF8m58';
+        } else if (selectedColor === 'vermelha-e-preta') {
+            checkoutUrl = 'https://pagamento-6.finalizarcompra.com/r/m3gLj542iX58Lo2916';
+        } else if (selectedColor === 'branca') {
+            checkoutUrl = 'https://pagamento-6.finalizarcompra.com/r/H4836t824p15yJMh22Yd';
+        }
 
-      window.location.href = checkoutUrl;
+        window.location.href = checkoutUrl;
     });
-  });
+});
 </script>
 
 
