@@ -1,0 +1,293 @@
+<html><head>
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#000000">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link rel="stylesheet" href="css/style.css">
+  
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://dominio-permitido.com">
+
+  
+<style>
+  /* Estilo para o modal, botão pulsante e roleta */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999; /* Garante que o modal esteja acima de todos os outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+    text-align: center;
+  }
+  
+  @keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+  
+  /* Estilo para o botão de fechar */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Estilo para o botão pulsante */
+  .btn {
+    background-color: #3C3C3C; /* Cor de fundo */
+    border: none; /* Remove a borda */
+    color: white; /* Cor do texto */
+    padding: 15px 20px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remove a decoração de texto */
+    display: inline-block; /* Exibe como bloco */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 8px; /* Borda arredondada */
+    transition-duration: 0.4s; /* Duração da transição */
+    cursor: pointer; /* Cursor apontando */
+  }
+  
+  .btn:hover {
+    background-color: #002964; /* Cor de fundo ao passar o mouse */
+  }
+  footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      color: black;
+      text-align: center;
+      border-radius: 5px;
+      padding: 80px 0;
+    }
+
+    /* Estilos para a seção de conteúdo */
+    .content {
+      text-align: center; /* Alinha o conteúdo centralmente */
+      background-color: rgba(255, 255, 255, 0.8); /* Adiciona uma leve transparência ao fundo */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra */
+    }
+
+    /* Estilos para a roleta */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .wheel {
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+      margin-top: 20px;
+    }
+
+    .spinBtn {
+      margin-top: 20px;
+    }
+
+    body {
+      margin: 0;
+      background-size: cover; /* Para cobrir todo o elemento */
+      background-position: center; /* Para centralizar a imagem */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url('images/spa-spoon-soap-copy-space_23-2148481761.jpg');
+    }
+
+    /* Estilos para a seção de conteúdo */
+    .content {
+      text-align: center; /* Alinha o conteúdo centralmente */
+      background-color: rgba(255, 255, 255, 0.8); /* Adiciona uma leve transparência ao fundo */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra */
+      margin-top: 20px;
+    }
+  </style></head>
+
+<body>
+<!-- Modal -->
+<div id="myModal" class="modal">
+<!-- Conteúdo do modal -->
+<div class="modal-content">
+  <span class="close">×</span>
+  <img src="images/mensagem.png" style="width: 100%;"> <br> <br>
+  <h4>VOCÊ GIROU E GANHOU O MELHOR PRÊMIO DA ROLETA SAMSUNG!</h4> <br><br>
+  <button class="btn">Aproveitar meu prêmio</button>
+</div>
+</div>
+
+<div class="container">
+  <div class="spinBtn"><img src="images/toque.png" style="width: 80%;"></div>
+  <div class="wheel">
+      <div class="number" style="--i:1;--clr:#0b3c2a;font-size: 40px;"><span>X</span></div>
+      <div class="number" style="--i:2;--clr:#d5b9be;"><span>R$ 75</span></div>
+      <div class="number" style="--i:3;--clr:#0b3c2a;font-size: 40px;"><span>X</span></div>
+      <div class="number" style="--i:4;--clr:#d5b9be;"><span>R$ 250</span></div>
+      <div class="number" style="--i:5;--clr:#0b3c2a; font-size: 40px;"><span>X</span></div>
+      <div class="number" style="--i:6;--clr:#d5b9be;"><span>R$ 350</span></div>
+      <div class="number" style="--i:7;--clr:#0b3c2a; font-size: 40px;"><span>X</span></div>
+      <div class="number" style="--i:8;--clr:#d5b9be; font-size: 14px;"><span>�&nbsp;�&nbsp;1 KIT <br> GRÁTIS </span></div>
+    </div>
+</div>
+<br><br><br>
+<footer>
+  <h5>VOCÊ TEM <span id="remainingSpins">3</span> TENTATIVA(S) RESTANTE(S)</h5><br>
+  <img src="images/db9268be34fa227db3c19399ae11c01e.png" style="width: 50px;"><br>
+
+</footer>
+
+<script>
+  
+  let spinsRemaining = 3;
+
+  function decreaseSpins() {
+    if (spinsRemaining > 0) {
+      spinsRemaining--;
+      document.getElementById('remainingSpins').textContent = spinsRemaining;
+    }
+  }
+  
+  let wheel = document.querySelector('.wheel');
+  let spinBtn = document.querySelector('.spinBtn');
+  let modal = document.getElementById("myModal");
+  let closeBtn = document.getElementsByClassName("close")[0];
+  let prizeBtn = document.getElementsByClassName("btn")[0];
+  let spins = 0;
+  let spinning = false; // Flag para indicar se a roleta está girando ou não
+
+  spinBtn.onclick = function(){
+
+    decreaseSpins();
+
+      if (spinning) return; // Evita múltiplos cliques enquanto a roleta está girando
+      
+      let angle;
+      if (spins < 2) {
+          // Ângulos para as duas primeiras rodadas
+          let angles = [2413, 4758]; // Destinos para 'X'
+          angle = angles[spins];
+      } else {
+          // Ângulo para a terceira rodada
+          angle = 5794; // Destino para 90% OFF
+      }
+      wheel.style.transition = "transform 3.5s cubic-bezier(0.25, 0.1, 0.25, 1)";
+      wheel.style.transform = "rotate(" + angle + "deg)";
+      spinning = true; // Define que a roleta está girando
+      
+      // Espera até que a roleta pare e então exibe o popup
+      setTimeout(() => {
+          spinning = false; // Define que a roleta parou
+          if (spins < 3) {
+              // Abre o modal informando que não ganhou o prêmio
+              let message = "Que pena! Você não ganhou o prêmio desta vez.";
+              openModalFalha(message);
+          } else {
+              // Abre o modal padrão informando o prêmio
+              let message = "Sucesso";
+              openModalSucesso(message);
+          }
+      }, 5000); // Tempo correspondente à duração da animação da roleta
+      spins++;
+  }
+
+    // Função para abrir o modal com mensagem específica
+    function openModalSucesso(message) {
+      modal.style.display = "block";
+      let modalContent = document.querySelector('.modal-content');
+      modalContent.innerHTML = `
+          <img src="mensagem.png" style="width: 100%"><br><br>
+          <h4>Parabéns! Você ganhou 1 KIT 100% GRÁTIS!</h4><br>
+          <p>Você ganhou <strong> 1 KIT 100% GRÁTIS</strong> na linha <strong>Natura Mamãe e Bebê</strong>. <br>
+            <img src="https://production.na01.natura.com/on/demandware.static/-/Sites-natura-br-storefront-catalog/default/dw2be345fe/NATBRA-126979_1.jpg" style="width:140px">
+            <br><br>Para aproveitar, basta clicar no botão abaixo e você será redirecionado para uma página onde seu desconto já está pronto para uso. Esse desconto expira dentro de 2 horas, por isso, é importante que você seja rápido com a sua compra.</p> <br>
+          <a href="https://natura.dia-das-maes.com/" target="_blank" class="btn">Aproveitar prêmio</a>
+      `;
+      
+      // Fecha o modal ao clicar no botão de fechar
+      closeBtn.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // Fecha o modal ao clicar fora do modal
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      
+      // Ação do botão "Tentar novamente"
+      let tryAgainBtn = document.querySelector('.modal-content .btn');
+      tryAgainBtn.onclick = function() {
+          modal.style.display = "none";
+      }
+  }
+
+  // Função para abrir o modal com mensagem específica
+  function openModalFalha(message) {
+      modal.style.display = "block";
+      let modalContent = document.querySelector('.modal-content');
+      modalContent.innerHTML = `
+          <img src="popup.png" style="width: 100%"><br>
+          <h4> Quaaase! Foi por pouco! </h4><br>
+          <p>Mas nao se preocupe, você ainda pode tentar novamente! Você ainda tem giros disponíveis.</p>
+          <img src="https://images.emojiterra.com/google/android-10/512px/1f625.png" style="width: 30%;"> <br> <br>
+          <h4>Clique no botao abaixo para girar a roleta novamente</h4> <br><br>
+          <button class="btn">Tentar novamente</button>
+      `;
+      
+      // Fecha o modal ao clicar no botão de fechar
+      closeBtn.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // Fecha o modal ao clicar fora do modal
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      
+      // Ação do botão "Tentar novamente"
+      let tryAgainBtn = document.querySelector('.modal-content .btn');
+      tryAgainBtn.onclick = function() {
+          modal.style.display = "none";
+      }
+  }
+</script>
+
+
+</body></html>
