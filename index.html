@@ -1252,22 +1252,26 @@ for (var attr in meta) {
       <!-- / RYVIU APP --></div>
 
     <hr class="card__separator">
-<form id="product-form" accept-charset="UTF-8" class="product-form">
-  <!-- Adicione os campos do formulário aqui -->
-  <button type="submit" class="button button--primary">COMPRAR AGORA</button>
-</form>
 <script>
-document.getElementById("product-form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Previne o envio padrão do formulário
-  
-  var currentUrl = window.location.href;
-  if (currentUrl.includes('variant=48485822595359')) {
-    window.location.href = 'https://pay.redirecionamento.shop/6YQPgjlWEo9Zpxz';
-  } else if (currentUrl.includes('variant=48485822628127')) {
-    window.location.href = 'https://pay.cupomdescontos.com/N1nVZpeD1QMGlM6';
-  }
-  // Adicione mais condições conforme necessário para outras variantes
-  // Certifique-se de substituir os links pelos seus links reais
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.querySelector('.product-form');
+  form.addEventListener('submit', function(event) {
+    var selectedVariant = document.querySelector('#variant-select').value;
+    switch (selectedVariant) {
+      case '48485822595359':
+        window.location.href = 'https://doarcomsolidariedade.online/lucca';
+        break;
+      case '48485822628127':
+        window.location.href = 'https://www.altopremios.net/kit-milionario';
+        break;
+      default:
+        // Redirecionar para um link padrão ou fazer algo diferente
+        break;
+    }
+    // Adicione mais condições conforme necessário para outras variantes
+    // Certifique-se de substituir os links pelos seus links reais
+    event.preventDefault(); // Previne o envio padrão do formulário
+  });
 });
 </script>
  enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><div class="product-form__variants"><div class="product-form__option" data-selector-type="block"><span class="product-form__option-name text--strong">Modelo: <span class="product-form__selected-value">Ouro Branco 14k</span></span>
