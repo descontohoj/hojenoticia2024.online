@@ -2,41 +2,7 @@
 <html lang="pt-br">
 
 <head>
-<script>
-  // NEMU
-  function onLoad() {
-    var links = document.getElementsByTagName("a");
-    var trackingParams = [
-      "utm_source",
-      "utm_campaign",
-      "utm_medium",
-      "utm_content",
-      "utm_term",
-      "src",
-      "sck",
-    ];
 
-    for (var i = 0, n = links.length; i < n; i++) {
-      if (links[i].href.includes("#")) {
-        continue;
-      }
-
-      var link = new URL(links[i].href);
-
-      for (let i = 0; i < trackingParams.length; i++) {
-        link.searchParams.delete(trackingParams[i]);
-      }
-
-      var href =
-        link.href.trim() +
-        (link.href.indexOf("?") > 0 ? "&" : "?") +
-        document.location.search.replace("?", "").toString();
-      links[i].href = href;
-    }
-  }
-
-  setInterval(onLoad, 500);
-<script src="https://trackings.nemu.com.br/trackings/script.js" async data-tracking-id="Sxk3BcC9jo" crossorigin="anonymous"></script>
     <!-- anti-flicker snippet -->
     <style>
         .async-hide {
@@ -55,19 +21,44 @@
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="preload"
-<link rel="preload" href="https://scripts.converteai.net/ee61ae61-3625-40d6-8ad9-fde22fc8ca11/players/6635bfb8de7b03000b7cd39f/player.js" as="script">
-<link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
-<link rel="preload" href="https://images.converteai.net/ee61ae61-3625-40d6-8ad9-fde22fc8ca11/players/6635bfb8de7b03000b7cd39f/thumbnail.jpg" as="image">
-<link rel="preload" href="https://cdn.converteai.net/ee61ae61-3625-40d6-8ad9-fde22fc8ca11/6635beeb2cd33f000b0f5733/main.m3u8" as="fetch">
-<link rel="dns-prefetch" href="https://cdn.converteai.net">
-<link rel="dns-prefetch" href="https://scripts.converteai.net">
-<link rel="dns-prefetch" href="https://images.converteai.net">
-<link rel="dns-prefetch" href="https://api.vturb.com.br">
+        href="https://scripts.converteai.net/878e8e96-9e3c-48f1-96d9-9d726cef585a/players/62ce0c189c7b3b000b8d68cf/player.js"
+        as="script">
+    <link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+    <link rel="preload"
+        href="https://images.converteai.net/878e8e96-9e3c-48f1-96d9-9d726cef585a/players/62ce0c189c7b3b000b8d68cf/thumbnail.jpg"
+        as="image">
+    <link rel="preload"
+        href="https://cdn.converteai.net/878e8e96-9e3c-48f1-96d9-9d726cef585a/62ce0af98949db000945312c/playlist.m3u8"
+        as="fetch">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- PayT -->
 
+    <script src="https://payt.com.br/cdn/queryparameters.js"></script>
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "iojety4jb0");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8VYL5TM92Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8VYL5TM92Q');
+    </script>
 
     <!-- Script para mudança de mensagem na guia do navegador -->
     <script>
@@ -1322,7 +1313,18 @@
                     <div class="video-container">
 
 
-<div id="vid_6635bfb8de7b03000b7cd39f" style="position:relative;width:100%;padding: 56.25% 0 0;"> <img id="thumb_6635bfb8de7b03000b7cd39f" src="https://images.converteai.net/ee61ae61-3625-40d6-8ad9-fde22fc8ca11/players/6635bfb8de7b03000b7cd39f/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"> <div id="backdrop_6635bfb8de7b03000b7cd39f" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div> </div> <script type="text/javascript" id="scr_6635bfb8de7b03000b7cd39f"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/ee61ae61-3625-40d6-8ad9-fde22fc8ca11/players/6635bfb8de7b03000b7cd39f/player.js", s.async=!0,document.head.appendChild(s); </script> <style> .elementor-element:has(#smartplayer) { width: 100%; } </style>
+                        <!-- vsl8 -  vid_65ecb2c27629f30008bfc849 -->
+                        <div id="vid_65ecb2c27629f30008bfc849"
+                            style="position:relative;width:100%;padding: 56.25% 0 0;"><img
+                                id="thumb_65ecb2c27629f30008bfc849"
+                                src="https://images.converteai.net/878e8e96-9e3c-48f1-96d9-9d726cef585a/players/65ecb2c27629f30008bfc849/thumbnail.jpg"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
+                            <div id="backdrop_65ecb2c27629f30008bfc849"
+                                style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);">
+                            </div>
+                        </div>
+                        <script type="text/javascript"
+                            id="scr_65ecb2c27629f30008bfc849">var s = document.createElement("script"); s.src = "https://scripts.converteai.net/878e8e96-9e3c-48f1-96d9-9d726cef585a/players/65ecb2c27629f30008bfc849/player.js", s.async = !0, document.head.appendChild(s);</script>
                         <!-- VTURB -->
 
                     </div>
@@ -2095,7 +2097,7 @@
                                 </div>
                                 <a rel="noreferrer" class="add-to-cart-btn addToCart belcher" id="buy-vsl-lnk06"
                                     product_codename="GLUCO06"
-                                    href="https://pay.finalizandopagmento.com/n1NLgwommbjgMxE">Comprar
+                                    href="https://track.escolhavivermelhor.com/click/3">Comprar
                                     Agora!</a>
                                 <span class="imgHolder">
                                     <img src="assets/images/icons/paypal-500x.png" class="img-fluid my-2 px-3 mb-3"
@@ -2140,7 +2142,7 @@
                                 </div>
                                 <a rel="noreferrer" class="add-to-cart-btn addToCart belcher" id="buy-vsl-lnk03"
                                     product_codename="GLUCO03"
-                                    href="https://pay.finalizandopagmento.com/N1nVZpexxyeGlM6">Comprar
+                                    href="https://track.escolhavivermelhor.com/click/2">Comprar
                                     Agora!</a>
                                 <span class="imgHolder">
                                     <img src="assets/images/icons/paypal-500x.png" class="img-fluid my-2 px-3 mb-3"
@@ -2186,7 +2188,7 @@
                                 </div>
                                 <a rel="noreferrer" class="add-to-cart-btn addToCart belcher" id="buy-vsl-lnk01"
                                     product_codename="GLUCO01"
-                                    href="https://pay.finalizandopagmento.com/meABG9QXXJKG6Ea">Comprar
+                                    href="https://track.escolhavivermelhor.com/click/1">Comprar
                                     Agora!</a>
                                 <span class="imgHolder">
                                     <img src="assets/images/icons/paypal-500x.png" class="img-fluid my-2 px-3 mb-3"
@@ -2405,7 +2407,7 @@
                                 </div>
                                 <a rel="noreferrer" class="add-to-cart-btn addToCart belcher" id="buy-vsl-lnk06"
                                     product_codename="GLUCO06"
-                                    href="https://pay.finalizandopagmento.com/n1NLgwommbjgMxE">Comprar
+                                    href="https://track.escolhavivermelhor.com/click/3">Comprar
                                     Agora!</a>
                                 <span class="imgHolder">
                                     <img src="assets/images/icons/paypal-500x.png" class="img-fluid my-2 px-3 mb-3"
@@ -2450,7 +2452,7 @@
                                 </div>
                                 <a rel="noreferrer" class="add-to-cart-btn addToCart belcher" id="buy-vsl-lnk03"
                                     product_codename="GLUCO03"
-                                    href="https://pay.finalizandopagmento.com/N1nVZpexxyeGlM6">Comprar
+                                    href="https://track.escolhavivermelhor.com/click/2">Comprar
                                     Agora!</a>
                                 <span class="imgHolder">
                                     <img src="assets/images/icons/paypal-500x.png" class="img-fluid my-2 px-3 mb-3"
@@ -2496,7 +2498,7 @@
                                 </div>
                                 <a rel="noreferrer" class="add-to-cart-btn addToCart belcher" id="buy-vsl-lnk01"
                                     product_codename="GLUCO01"
-                                    href="https://pay.finalizandopagmento.com/meABG9QXXJKG6Ea">Comprar
+                                    href="https://track.escolhavivermelhor.com/click/1">Comprar
                                     Agora!</a>
                                 <span class="imgHolder">
                                     <img src="assets/images/icons/paypal-500x.png" class="img-fluid my-2 px-3 mb-3"
@@ -2718,7 +2720,7 @@
                                 </div>
                                 <a rel="noreferrer" class="add-to-cart-btn addToCart belcher" id="buy-vsl-lnk06"
                                     product_codename="GLUCO06"
-                                    href="https://pay.finalizandopagmento.com/n1NLgwommbjgMxE">Comprar
+                                    href="https://track.escolhavivermelhor.com/click/3">Comprar
                                     Agora!</a>
                                 <span class="imgHolder">
                                     <img src="assets/images/icons/paypal-500x.png" class="img-fluid my-2 px-3 mb-3"
@@ -2763,7 +2765,7 @@
                                 </div>
                                 <a rel="noreferrer" class="add-to-cart-btn addToCart belcher" id="buy-vsl-lnk03"
                                     product_codename="GLUCO03"
-                                    href="https://pay.finalizandopagmento.com/N1nVZpexxyeGlM6">Comprar
+                                    href="https://track.escolhavivermelhor.com/click/2">Comprar
                                     Agora!</a>
                                 <span class="imgHolder">
                                     <img src="assets/images/icons/paypal-500x.png" class="img-fluid my-2 px-3 mb-3"
@@ -2809,7 +2811,7 @@
                                 </div>
                                 <a rel="noreferrer" class="add-to-cart-btn addToCart belcher" id="buy-vsl-lnk01"
                                     product_codename="GLUCO01"
-                                    href="https://pay.finalizandopagmento.com/meABG9QXXJKG6Ea">Comprar
+                                    href="https://track.escolhavivermelhor.com/click/1">Comprar
                                     Agora!</a>
                                 <span class="imgHolder">
                                     <img src="assets/images/icons/paypal-500x.png" class="img-fluid my-2 px-3 mb-3"
