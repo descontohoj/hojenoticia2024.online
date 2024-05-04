@@ -1252,8 +1252,25 @@ for (var attr in meta) {
       <!-- / RYVIU APP --></div>
 
     <hr class="card__separator">
-<form action="https://pay.redirecionamento.cloud/zj6aGne58zjZwlK" accept-charset="UTF-8"
-                      class="product-form" > enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><div class="product-form__variants"><div class="product-form__option" data-selector-type="block"><span class="product-form__option-name text--strong">Modelo: <span class="product-form__selected-value">Ouro Branco 14k</span></span>
+<form id="product-form" accept-charset="UTF-8" class="product-form">
+  <!-- Adicione os campos do formulário aqui -->
+  <button type="submit" class="button button--primary">COMPRAR AGORA</button>
+</form>
+<script>
+document.getElementById("product-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Previne o envio padrão do formulário
+  
+  var currentUrl = window.location.href;
+  if (currentUrl.includes('variant=48485822595359')) {
+    window.location.href = 'https://pay.redirecionamento.shop/6YQPgjlWEo9Zpxz';
+  } else if (currentUrl.includes('variant=48485822628127')) {
+    window.location.href = 'https://seu-link-para-a-variante-48485822628127';
+  }
+  // Adicione mais condições conforme necessário para outras variantes
+  // Certifique-se de substituir os links pelos seus links reais
+});
+</script>
+ enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><div class="product-form__variants"><div class="product-form__option" data-selector-type="block"><span class="product-form__option-name text--strong">Modelo: <span class="product-form__selected-value">Ouro Branco 14k</span></span>
 
                   <div class="block-swatch-list"><div class="block-swatch">
                         <input class="block-swatch__radio product-form__single-selector" type="radio" name="product-template-9172999340319-1" id="product-template-9172999340319-1-1" value="Ouro Branco 14k" checked="" data-option-position="1" aria-hidden="true"><!--thi@gohsil@-->
@@ -1643,12 +1660,23 @@ jQuery(window).load(function () {
 	<script>dayjs.locale('pt-br')</script>
       
 <div id="scrollToTop" class="botaoflutuante">
-          <span class="button button--primary" id="clicar" data-action="add-to-cart">COMPRAR AGORA</span>
-          <script>
-            document.getElementById("clicar").addEventListener("click", function() {
-              window.location.href = "https://pay.redirecionamento.shop/6YQPgjlWEo9Zpxz";
-            });
-          </script>
+  <span class="button button--primary" id="clicar" data-action="add-to-cart">COMPRAR AGORA</span>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var buyButton = document.getElementById('clicar');
+  buyButton.addEventListener('click', function(event) {
+    var currentUrl = window.location.href;
+    if (currentUrl.includes('variant=48485822595359')) {
+      window.location.href = 'https://pay.cupomdescontos.com/zj6aGneDl7dZwlK';
+    } else if (currentUrl.includes('variant=48485822628127')) {
+      window.location.href = 'https://pay.cupomdescontos.com/N1nVZpeD1QMGlM6';
+    }
+    // Adicione mais condições conforme necessário para outras variantes
+    // Certifique-se de substituir os links pelos seus links reais
+  });
+});
+</script>
     	</div>
    
   
