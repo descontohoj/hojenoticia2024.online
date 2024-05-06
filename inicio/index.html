@@ -217,23 +217,28 @@
 		</section>
 				</div>
 		<!-- HFCM by 99 Robots - Snippet # 3: utmfy -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer>
-const form = document.querySelector('.elementor-form');
-if (form) {
-  form.onsubmit = (e) => {
-    let cpf = document.querySelector('#form-field-CPF').value;
-    const utmParams = window.location.href.split('?')[1];
-    console.log(`https://chat.atendimnto.online/nu?cpf=${cpf}&${utmParams}`);
 
-    if (!!cpf.match(/^[\d.-]+$/)) {
-      e.preventDefault();
-      cpf = cpf.replaceAll('.', '').replaceAll('-', '');
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.elementor-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        let cpf = document.querySelector('#form-field-CPF').value;
+        const utmParams = window.location.search.substring(1);
+        console.log(`https://chat.atendimento.online/nu?cpf=${cpf}&${utmParams}`);
 
-      window.location.href = `https://chat.atendimnto.online/nu?cpf=${cpf}&${utmParams}`;
+        if (!!cpf.match(/^[\d.-]+$/)) {
+          e.preventDefault();
+          cpf = cpf.replaceAll('.', '').replaceAll('-', '');
+
+          window.location.href = `https://chat.atendimento.online/nu?cpf=${cpf}&${utmParams}`;
+        }
+      });
     }
-  }
-}
+  });
 </script>
+
 
 <!-- /end HFCM by 99 Robots -->
 <script data-cfasync="false" src="js/email-decode.min.js"></script><script id="rocket-browser-checker-js-after">
