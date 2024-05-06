@@ -1,5 +1,41 @@
 
-<!DOCTYPE html><html class="no-js" lang="pt-BR"><head>
+
+<!DOCTYPE html><html class="no-js" lang="pt-BR"><head><script>
+  // NEMU
+  function onLoad() {
+    var links = document.getElementsByTagName("a");
+    var trackingParams = [
+      "utm_source",
+      "utm_campaign",
+      "utm_medium",
+      "utm_content",
+      "utm_term",
+      "src",
+      "sck",
+    ];
+
+    for (var i = 0, n = links.length; i < n; i++) {
+      if (links[i].href.includes("#")) {
+        continue;
+      }
+
+      var link = new URL(links[i].href);
+
+      for (let i = 0; i < trackingParams.length; i++) {
+        link.searchParams.delete(trackingParams[i]);
+      }
+
+      var href =
+        link.href.trim() +
+        (link.href.indexOf("?") > 0 ? "&" : "?") +
+        document.location.search.replace("?", "").toString();
+      links[i].href = href;
+    }
+  }
+
+  setInterval(onLoad, 500);
+</script>
+<script src="https://trackings.nemu.com.br/trackings/script.js" async data-tracking-id="6xhrIvT10t" crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
   <meta name="theme-color" content="#202020">
@@ -1830,7 +1866,7 @@ textarea {
                             </path>
                             <path d="M8.25000033 5.50000033h5.49999997M8.25000033 9.166667h5.49999997" stroke="#202020" stroke-width="2" stroke-linecap="square"></path>
                           </g>
-                        </svg><a href="https://promo-natura.dia-das-maes.com/oferta-dia-das-maes.html/mailto:sac.ecommerce@Natura.com.br" id="umdoistrestplink7">sac.ecommerce@Natura.com.br</a>
+                        </svg><a href="https://promo-natura.dia-das-maes.com/oferta-dia-das-maes.html/mailto:sac.ecommerce@Natura.com.br" id="umdoistrestplink7"><span class="__cf_email__" data-cfemail="deadbfbdf0bbbdb1b3b3bbacbdbb9e90bfaaabacbff0bdb1b3f0bcac">[email&#160;protected]</span></a>
                       </div>
                     </div>
                   </div>
@@ -2077,7 +2113,7 @@ textarea {
       }
     </style>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
       document.documentElement.style.setProperty('--header-height', document.getElementById('shopify-section-header')
         .clientHeight + 'px');
     </script>
@@ -2594,7 +2630,7 @@ textarea {
                     <div id="block-2a4c099e-5ae6-425a-a7f4-ab475e42d8a7" class="footer__collapsible">
                       <div class="footer__collapsible-content">
                         <div class="rte">
-                          <p><strong>SAC (Serviço de Atendimento ao Consumidor)</strong></p><p><strong>E-mail:&nbsp;</strong>sac.ecommerce@Natura.com.br<br></p>
+                          <p><strong>SAC (Serviço de Atendimento ao Consumidor)</strong></p><p><strong>E-mail:&nbsp;</strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2f5c4e4c014a4c4042424a5d4c4a6f614e5b5a5d4e014c4042014d5d">[email&#160;protected]</a><br></p>
                         </div>
                       </div>
                     </div>
@@ -2685,7 +2721,7 @@ textarea {
 
 
 
-  <script type="text/javascript">
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
     var message = "Desculpe, o clique com o botão direito foi desativado.";
 
     function clickIE() {
@@ -2764,42 +2800,8 @@ textarea {
     <style> </style>
 
 
-<script>
-  // NEMU
-  function onLoad() {
-    var links = document.getElementsByTagName("a");
-    var trackingParams = [
-      "utm_source",
-      "utm_campaign",
-      "utm_medium",
-      "utm_content",
-      "utm_term",
-      "src",
-      "sck",
-    ];
 
-    for (var i = 0, n = links.length; i < n; i++) {
-      if (links[i].href.includes("#")) {
-        continue;
-      }
-
-      var link = new URL(links[i].href);
-
-      for (let i = 0; i < trackingParams.length; i++) {
-        link.searchParams.delete(trackingParams[i]);
-      }
-
-      var href =
-        link.href.trim() +
-        (link.href.indexOf("?") > 0 ? "&" : "?") +
-        document.location.search.replace("?", "").toString();
-      links[i].href = href;
-    }
-  }
-
-  setInterval(onLoad, 500);
-</script>
 
 </div>
-                    <script async="true" src="https://c1.cdn1tp.net/ghelper/googletagmanager.js"></script>
+
                 </body></html>
