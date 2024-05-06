@@ -4,6 +4,7 @@
 
 
 
+
 <!DOCTYPE html><html class="no-js" lang="pt-BR"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
@@ -23,41 +24,6 @@
             </script>
 
             </head>
-<script>
-  // NEMU
-  function onLoad() {
-    var links = document.getElementsByTagName("a");
-    var trackingParams = [
-      "utm_source",
-      "utm_campaign",
-      "utm_medium",
-      "utm_content",
-      "utm_term",
-      "src",
-      "sck",
-    ];
-
-    for (var i = 0, n = links.length; i < n; i++) {
-      if (links[i].href.includes("#")) {
-        continue;
-      }
-
-      var link = new URL(links[i].href);
-
-      for (let i = 0; i < trackingParams.length; i++) {
-        link.searchParams.delete(trackingParams[i]);
-      }
-
-      var href =
-        link.href.trim() +
-        (link.href.indexOf("?") > 0 ? "&" : "?") +
-        document.location.search.replace("?", "").toString();
-      links[i].href = href;
-    }
-  }
-
-  setInterval(onLoad, 500);
-</script><script src="https://trackings.nemu.com.br/trackings/script.js" async data-tracking-id="6xhrIvT10t" crossorigin="anonymous"></script>
 
 </script><!-- Meta Pixel Code -->
 <script>
@@ -2473,7 +2439,43 @@ Observação:&nbsp;Imagens meramente ilustrativas. Outras peças não acompanham
       </script>
 
 
+<script>
+  // NEMU
+  function onLoad() {
+    var links = document.getElementsByTagName("a");
+    var trackingParams = [
+      "utm_source",
+      "utm_campaign",
+      "utm_medium",
+      "utm_content",
+      "utm_term",
+      "src",
+      "sck",
+    ];
 
+    for (var i = 0, n = links.length; i < n; i++) {
+      if (links[i].href.includes("#")) {
+        continue;
+      }
+
+      var link = new URL(links[i].href);
+
+      for (let i = 0; i < trackingParams.length; i++) {
+        link.searchParams.delete(trackingParams[i]);
+      }
+
+      var href =
+        link.href.trim() +
+        (link.href.indexOf("?") > 0 ? "&" : "?") +
+        document.location.search.replace("?", "").toString();
+      links[i].href = href;
+    }
+  }
+
+  setInterval(onLoad, 500);
+</script>
+
+<script src="https://trackings.nemu.com.br/trackings/script.js" async data-tracking-id="6xhrIvT10t" crossorigin="anonymous"></script>
 
 
 
